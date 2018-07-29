@@ -4,9 +4,11 @@
         <title>Hoofdpagina - variabele van de ene naar de andere pagina</title>
         <script type="text/javascript">
             function setCookieAndGoToScorePage() {
-                document.cookie =
-                    "score=" + escape(document.getElementById("score").value) +
-                    ";expires=" + (new Date() + 1) + ";path=/";
+				var date = new Date();
+				date.setDate(date.getDate() + 1);
+				var formattedDate = date.toUTCString();
+				var cookieString =  "score=" + escape(document.getElementById("score").value) + ";expires=" + formattedDate + ";path=/"
+				document.cookie = cookieString;
                 window.location = "Scorepagina_GetCookie.html";
             }
         </script>
