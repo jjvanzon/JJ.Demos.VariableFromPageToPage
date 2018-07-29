@@ -1,0 +1,31 @@
+<!-- Jan-Joost van Zon, July 5, 2010 -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Main Page - Variable from Page to Page</title>
+        <script type="text/javascript" src="CookieFunctions.js"></script>
+        <script type="text/javascript">
+
+            function setCookieSimple() {
+                document.cookie =
+                    "score=" + document.getElementById("score").getAttribute("value") +
+                    ";expires=" + (new Date() + 1) + ";path=/";
+            }
+
+            function setCookieAndGoToScorePage() {
+                // setCookie("score", document.getElementById("score").getAttribute("value"), new Date() + 1, "/");
+                setCookieSimple();
+                window.location = "ScorePage_GetCookie.html";
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Main Page - Variable from Page to Page</h2>
+        <p>This is an example of using a cookie to remember a variable and show it in the next page.</p>
+        <p>
+            Enter score: <input type="text" id="score" />
+            <input type="button" value="Show Score" onclick="setCookieAndGoToScorePage()" />
+        </p>
+    </body>
+</html>

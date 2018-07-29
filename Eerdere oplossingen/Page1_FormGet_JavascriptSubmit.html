@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- This example uses the HTML DOM to submit the form. -->
+<html>
+    <head>
+        <title>Variable from one page to another</title>
+    </head>
+    <body>
+        <h2>Variable from one page to another</h2>
+        <form name="myForm" method="get" action="Page2_DocumentWrite_URLParameter.html">
+            <input type="hidden" name="score" value="364" />
+        </form>
+        <input type="button" value="Bepaal score" onclick="document.forms['myForm'].submit()" />
+    </body>
+</html>

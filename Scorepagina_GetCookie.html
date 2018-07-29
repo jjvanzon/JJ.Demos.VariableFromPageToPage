@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Scorepagina - variabele van de ene naar de andere pagina</title>
+        <script type="text/javascript">
+            function getCookie(name) {
+                var results = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+                if (results) { return results[2]; }
+                else { return null; }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Scorepagina - variabele van de ene naar de andere pagina</h2>
+        <p>
+            Uw score:
+            <script type="text/javascript">document.write(getCookie("score"));</script>
+        </p>
+    </body>
+</html>

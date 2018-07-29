@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Hoofdpagina - variabele van de ene naar de andere pagina</title>
+        <script type="text/javascript">
+            function setCookieAndGoToScorePage() {
+                document.cookie =
+                    "score=" + escape(document.getElementById("score").value) +
+                    ";expires=" + (new Date() + 1) + ";path=/";
+                window.location = "Scorepagina_GetCookie.html";
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Hoofdpagina - variabele van de ene naar de andere pagina</h2>
+        <p>Dit is een voorbeeld van hoe je met behulp van JavaScript een cookie kunt gebruiken om een variabele in de ene pagina op te slaan en in de volgende pagina weer te laten zien.</p>
+        <p>
+            Voer score in:
+            <input id="score" type="text" />
+            <input type="button" value="Toon score" onclick="setCookieAndGoToScorePage()" />
+        </p>
+    </body>
+</html>
